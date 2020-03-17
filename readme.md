@@ -15,6 +15,10 @@ The first method is uses a persistant DB connection object that can be imported 
     * It will attempt to reconnect if the WS connection drops
     * I have just send a simple string message that is simply returned via kdb
 
+### End Result
+
+![method1](https://user-images.githubusercontent.com/32989131/76908370-69f5e480-68a0-11ea-8e42-ec459308bdd8.PNG)
+
 ## 2. Passing KDB Connection details via jinja2 / js
 
 The second method is done by passing connection details to the webpage via jinja2 and using js websockets to connect.
@@ -24,9 +28,13 @@ The second method is done by passing connection details to the webpage via jinja
 * The connection details are passed via a jinja2 data object to the html page. ( see main/routes.py chart_kdb )
 * This is then passed into the JS function named connect (( taken from KX WebSocket Whitepaper)[https://code.kx.com/q/wp/websockets/]) 
     * Also defines the onmessage function.
-* In my example, I've used a button that sends a message to the KDB server and returns a JSON message back
+* In my example, I've used a button (Click me) that sends a message to the KDB server and returns a JSON message back
 * The data is then used to generate a chart using chart.js
 * data is compared with data sent via jinja2 in same flask request
+
+### End Result
+
+![method2](https://user-images.githubusercontent.com/32989131/76908431-901b8480-68a0-11ea-89b3-19a26231fccb.PNG)
 
 ## Improvements and Ideas?
 
