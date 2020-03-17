@@ -1,0 +1,21 @@
+mtenv
+__pycache__/
+*.py[cod]
+migrations/versions
+logs
+
+#Translation File
+*.mo
+
+#sqllite db
+app.db
+
+#Config
+.env
+env.bat
+
+#vscoe 
+.vscode
+
+#personal
+notes
