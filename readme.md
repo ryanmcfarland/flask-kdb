@@ -6,7 +6,7 @@ A repo designed to show the multiple ways you can integrate flask and kdb togeth
 
 The first method is uses a persistant DB connection object that can be imported when required. I implemented this from this answer from [toppatopvt on StackOverflow](https://stackoverflow.com/a/55537278)
 
-### Details
+### chart_flask - Details
 
 * kdb connection is opened by using Websockets ( functions found in kdb.py )
 * DB object created within extensions.py file
@@ -23,7 +23,7 @@ The first method is uses a persistant DB connection object that can be imported 
 
 The second method is done by passing connection details to the webpage via jinja2 and using js websockets to connect.
 
-### Details
+### chart_kdb - Details
 
 * The connection details are passed via a jinja2 data object to the html page. ( see main/routes.py chart_kdb )
 * This is then passed into the JS function named connect (( taken from KX WebSocket Whitepaper)[https://code.kx.com/q/wp/websockets/]) 
