@@ -1,21 +1,6 @@
-mtenv
+*env
 __pycache__/
 *.py[cod]
-migrations/versions
-logs
+.pytest*
 
-#Translation File
-*.mo
-
-#sqllite db
-app.db
-
-#Config
-.env
-env.bat
-
-#vscoe 
 .vscode
-
-#personal
-notes
