@@ -1,11 +1,15 @@
-"""
-
-"""
 from qpython.qconnection import QConnection
 
 # https://stackoverflow.com/questions/55523299/best-practices-for-persistent-database-connections-in-python-when-using-flask
 
 class FlaskKDB:
+    """ Connection Class to connect to a KDB instance from a Flask App
+
+    :Parameters:
+    - `app`  : flask app, required
+    - `host`  : kdb host, optional | defined via env variable KDB_HOST
+    - `port` : kdb host, optional | defined via env variable KDB_PORT
+    """
     def __init__(self, app=None, host=None, port=None):
         self.app=app
         self.host=host
