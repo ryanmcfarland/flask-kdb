@@ -1,13 +1,8 @@
-"""
-Flask-qPython
--------------
-This is the description for that library
-"""
 import os
 import sys
-from setuptools import setup
+from setuptools import find_packages, setup
 
-from flask_kdb import __version__
+from version import __version__
 
 BASEDIR = os.path.dirname(__file__)
 
@@ -19,11 +14,12 @@ requirements = [
 
 setup(
     name='Flask-kdb',
-    url='http://www.github.com/jidn/flask-kdb/',
+    url='http://www.github.com/ryanmcfarland/flask-kdb/',
     author='Ryan McFarland',
     author_email='ryanmcfarland@outlook.com',
     description='kdb+ connections within a Flask application.',
-    long_description=open(os.path.join(BASEDIR, 'README.md')).read(),
+    long_description=open(os.path.join(BASEDIR, 'readme.md')).read(),
+    long_description_content_type='text/markdown',
     version=__version__,
     license='MIT License',
     keywords=['flask', 'kdb', 'kdb+', 'q', 'qpython'],
@@ -40,9 +36,10 @@ setup(
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
-        'Topic :: Software Development :: Libraries :: Python Modules'
+        'Topic :: Software Development :: Libraries :: Python Modules',
         'Topic :: Software Development',
     ],
     include_package_data=True,
+    packages=find_packages(exclude=("tests",)),
     install_requires=requirements,
 )

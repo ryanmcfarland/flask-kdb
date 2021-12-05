@@ -3,8 +3,6 @@
 """
 from qpython.qconnection import QConnection
 
-__version__ = "1.0.0"
-
 # https://stackoverflow.com/questions/55523299/best-practices-for-persistent-database-connections-in-python-when-using-flask
 
 class FlaskKDB:
